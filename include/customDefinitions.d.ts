@@ -57,6 +57,18 @@ interface Animator extends Instance {
 
 /** @server */
 interface AssetService extends Instance {
+	CreateEditableImage(this: AssetService, editableImageOptions?: EditableImageOptions): EditableImage;
+	CreateEditableMesh(this: AssetService, editableMeshOptions?: EditableMeshOptions): EditableMesh;
+	CreateEditableImageAsync(
+		this: AssetService,
+		content: Content,
+		editableImageOptions?: EditableImageOptions,
+	): EditableImage;
+	CreateEditableMeshAsync(
+		this: AssetService,
+		content: Content,
+		editableMeshOptions?: EditableMeshOptions,
+	): EditableMesh;
 	GetGamePlacesAsync(this: AssetService): StandardPages<{ Name: string; PlaceId: number }>;
 	GetAssetIdsForPackage(this: AssetService, packageAssetId: number): Array<number>;
 	GetBundleDetailsAsync(this: AssetService, bundleId: number): BundleInfo;
