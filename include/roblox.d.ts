@@ -3384,3 +3384,11 @@ interface CreateMeshPartAsyncOptions {
 	/** The value of `FluidFidelity` in the resulting part. Defaults to `Enum.FluidFidelity.Automatic` if the option is absent or the `options` table is `nil`. */
 	FluidFidelity?: Enum.FluidFidelity;
 }
+
+interface EditableImageOptions {
+	Size: Vector2;
+}
+
+interface EditableMeshOptions {
+	FixedSize: Boolean;
+}
